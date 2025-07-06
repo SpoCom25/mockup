@@ -1065,7 +1065,131 @@
 
             <div class="profile-section">
                 <h3 class="section-title">Weekly Overview</h3>
-                <div style="height: 200px; background: linear-gradient(135deg, #f5f5f5, #e0e0e0); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+                <div style="margin-bottom: 18px; color: var(--gray); font-size: 15px;">Your calorie intake and balance for the last 7 days</div>
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px;">
+                    <thead>
+                        <tr style="background: var(--secondary); color: var(--primary);">
+                            <th style="padding: 8px; border-radius: 8px 0 0 8px; text-align: left;">Day</th>
+                            <th style="padding: 8px; text-align: right;">Calories</th>
+                            <th style="padding: 8px; text-align: right;">Target</th>
+                            <th style="padding: 8px; border-radius: 0 8px 8px 0; text-align: right;">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px;">Mon</td>
+                            <td style="padding: 8px; text-align: right;">2,050</td>
+                            <td style="padding: 8px; text-align: right;">2,200</td>
+                            <td style="padding: 8px; text-align: right; color: var(--success);">-150</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">Tue</td>
+                            <td style="padding: 8px; text-align: right;">2,180</td>
+                            <td style="padding: 8px; text-align: right;">2,200</td>
+                            <td style="padding: 8px; text-align: right; color: var(--success);">-20</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">Wed</td>
+                            <td style="padding: 8px; text-align: right;">2,300</td>
+                            <td style="padding: 8px; text-align: right;">2,200</td>
+                            <td style="padding: 8px; text-align: right; color: var(--warning);">+100</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">Thu</td>
+                            <td style="padding: 8px; text-align: right;">2,120</td>
+                            <td style="padding: 8px; text-align: right;">2,200</td>
+                            <td style="padding: 8px; text-align: right; color: var(--success);">-80</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">Fri</td>
+                            <td style="padding: 8px; text-align: right;">2,000</td>
+                            <td style="padding: 8px; text-align: right;">2,200</td>
+                            <td style="padding: 8px; text-align: right; color: var(--success);">-200</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">Sat</td>
+                            <td style="padding: 8px; text-align: right;">1,950</td>
+                            <td style="padding: 8px; text-align: right;">2,200</td>
+                            <td style="padding: 8px; text-align: right; color: var(--success);">-250</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px;">Sun</td>
+                            <td style="padding: 8px; text-align: right;">1,856</td>
+                            <td style="padding: 8px; text-align: right;">2,200</td>
+                            <td style="padding: 8px; text-align: right; color: var(--success);">-344</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="font-weight: 500; color: var(--primary); text-align: right;">Weekly Balance: <span style="color: var(--success);">-944 kcal</span></div>
+            </div>
+
+            <div class="profile-section">
+                <h3 class="section-title">Weekly Overview</h3>
+                <div style="overflow-x: auto;">
+                    <table style="width:100%; border-collapse: collapse; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); margin-bottom: 20px;">
+                        <thead>
+                            <tr style="background: var(--secondary); color: var(--dark);">
+                                <th style="padding: 10px; text-align: left;">Day</th>
+                                <th style="padding: 10px; text-align: right;">Calories Eaten</th>
+                                <th style="padding: 10px; text-align: right;">Target</th>
+                                <th style="padding: 10px; text-align: right;">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px;">Mon</td>
+                                <td style="padding: 10px; text-align: right;">2,050</td>
+                                <td style="padding: 10px; text-align: right;">2,200</td>
+                                <td style="padding: 10px; text-align: right; color: var(--success);">-150</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Tue</td>
+                                <td style="padding: 10px; text-align: right;">2,180</td>
+                                <td style="padding: 10px; text-align: right;">2,200</td>
+                                <td style="padding: 10px; text-align: right; color: var(--success);">-20</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Wed</td>
+                                <td style="padding: 10px; text-align: right;">2,300</td>
+                                <td style="padding: 10px; text-align: right;">2,200</td>
+                                <td style="padding: 10px; text-align: right; color: var(--warning);">+100</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Thu</td>
+                                <td style="padding: 10px; text-align: right;">2,120</td>
+                                <td style="padding: 10px; text-align: right;">2,200</td>
+                                <td style="padding: 10px; text-align: right; color: var(--success);">-80</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Fri</td>
+                                <td style="padding: 10px; text-align: right;">2,000</td>
+                                <td style="padding: 10px; text-align: right;">2,200</td>
+                                <td style="padding: 10px; text-align: right; color: var(--success);">-200</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Sat</td>
+                                <td style="padding: 10px; text-align: right;">2,250</td>
+                                <td style="padding: 10px; text-align: right;">2,200</td>
+                                <td style="padding: 10px; text-align: right; color: var(--warning);">+50</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;">Sun</td>
+                                <td style="padding: 10px; text-align: right;">1,950</td>
+                                <td style="padding: 10px; text-align: right;">2,200</td>
+                                <td style="padding: 10px; text-align: right; color: var(--success);">-250</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr style="background: var(--secondary); font-weight: bold;">
+                                <td style="padding: 10px;">Total</td>
+                                <td style="padding: 10px; text-align: right;">14,850</td>
+                                <td style="padding: 10px; text-align: right;">15,400</td>
+                                <td style="padding: 10px; text-align: right; color: var(--success);">-550</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div style="height: 120px; background: linear-gradient(135deg, #f5f5f5, #e0e0e0); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
                     Nutrition Chart Placeholder
                 </div>
             </div>
