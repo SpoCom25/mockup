@@ -803,7 +803,7 @@
         <!-- Profile Section -->
         <div class="content-section" id="profileSection">
             <div class="profile-header">
-                <div class="profile-avatar"></div>
+                <div class="profile-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/75.jpg'); background-size: cover; background-position: center;"></div>
                 <h2>John Doe</h2>
                 <p>Fitness Enthusiast | Marathon Runner</p>
                 <div class="profile-stats">
@@ -1124,73 +1124,9 @@
             </div>
 
             <div class="profile-section">
-                <h3 class="section-title">Weekly Overview</h3>
-                <div style="overflow-x: auto;">
-                    <table style="width:100%; border-collapse: collapse; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); margin-bottom: 20px;">
-                        <thead>
-                            <tr style="background: var(--secondary); color: var(--dark);">
-                                <th style="padding: 10px; text-align: left;">Day</th>
-                                <th style="padding: 10px; text-align: right;">Calories Eaten</th>
-                                <th style="padding: 10px; text-align: right;">Target</th>
-                                <th style="padding: 10px; text-align: right;">Balance</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding: 10px;">Mon</td>
-                                <td style="padding: 10px; text-align: right;">2,050</td>
-                                <td style="padding: 10px; text-align: right;">2,200</td>
-                                <td style="padding: 10px; text-align: right; color: var(--success);">-150</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Tue</td>
-                                <td style="padding: 10px; text-align: right;">2,180</td>
-                                <td style="padding: 10px; text-align: right;">2,200</td>
-                                <td style="padding: 10px; text-align: right; color: var(--success);">-20</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Wed</td>
-                                <td style="padding: 10px; text-align: right;">2,300</td>
-                                <td style="padding: 10px; text-align: right;">2,200</td>
-                                <td style="padding: 10px; text-align: right; color: var(--warning);">+100</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Thu</td>
-                                <td style="padding: 10px; text-align: right;">2,120</td>
-                                <td style="padding: 10px; text-align: right;">2,200</td>
-                                <td style="padding: 10px; text-align: right; color: var(--success);">-80</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Fri</td>
-                                <td style="padding: 10px; text-align: right;">2,000</td>
-                                <td style="padding: 10px; text-align: right;">2,200</td>
-                                <td style="padding: 10px; text-align: right; color: var(--success);">-200</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Sat</td>
-                                <td style="padding: 10px; text-align: right;">2,250</td>
-                                <td style="padding: 10px; text-align: right;">2,200</td>
-                                <td style="padding: 10px; text-align: right; color: var(--warning);">+50</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Sun</td>
-                                <td style="padding: 10px; text-align: right;">1,950</td>
-                                <td style="padding: 10px; text-align: right;">2,200</td>
-                                <td style="padding: 10px; text-align: right; color: var(--success);">-250</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr style="background: var(--secondary); font-weight: bold;">
-                                <td style="padding: 10px;">Total</td>
-                                <td style="padding: 10px; text-align: right;">14,850</td>
-                                <td style="padding: 10px; text-align: right;">15,400</td>
-                                <td style="padding: 10px; text-align: right; color: var(--success);">-550</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <div style="height: 120px; background: linear-gradient(135deg, #f5f5f5, #e0e0e0); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
-                    Nutrition Chart Placeholder
+                <h3 class="section-title">Monthly Overview</h3>
+                <div style="height: 180px; background: linear-gradient(135deg, #f5f5f5, #e0e0e0); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+                    <canvas id="monthlyNutritionChart" width="600" height="140"></canvas>
                 </div>
             </div>
 
@@ -1386,6 +1322,108 @@
             });
         });
     </script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Nutrition Chart (Weekly)
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('nutritionChart')) {
+        const ctx = document.getElementById('nutritionChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [
+                    {
+                        label: 'Calories',
+                        data: [2050, 2180, 2300, 2120, 2000, 2250, 1950],
+                        backgroundColor: 'rgba(79, 140, 255, 0.7)',
+                        borderRadius: 6,
+                        maxBarThickness: 28
+                    },
+                    {
+                        label: 'Target',
+                        data: [2200, 2200, 2200, 2200, 2200, 2200, 2200],
+                        type: 'line',
+                        borderColor: '#2ECC71',
+                        backgroundColor: 'rgba(46,204,113,0.1)',
+                        borderWidth: 2,
+                        pointRadius: 3,
+                        fill: false,
+                        order: 2
+                    }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: { display: true, position: 'bottom' }
+                },
+                responsive: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: 2500,
+                        ticks: { color: '#A0AEC0', font: { size: 12 } },
+                        grid: { color: '#E3F0FF' }
+                    },
+                    x: {
+                        ticks: { color: '#A0AEC0', font: { size: 12 } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+    // Nutrition Chart (Monthly)
+    if (document.getElementById('monthlyNutritionChart')) {
+        const ctxMonth = document.getElementById('monthlyNutritionChart').getContext('2d');
+        new Chart(ctxMonth, {
+            type: 'line',
+            data: {
+                labels: Array.from({length: 30}, (_, i) => (i+1).toString()),
+                datasets: [
+                    {
+                        label: 'Calories',
+                        data: [2100, 2200, 2150, 2000, 2250, 2300, 2100, 2200, 2150, 2000, 2250, 2300, 2100, 2200, 2150, 2000, 2250, 2300, 2100, 2200, 2150, 2000, 2250, 2300, 2100, 2200, 2150, 2000, 2250, 2300],
+                        borderColor: 'rgba(79, 140, 255, 0.9)',
+                        backgroundColor: 'rgba(79, 140, 255, 0.1)',
+                        tension: 0.3,
+                        pointRadius: 2,
+                        fill: true
+                    },
+                    {
+                        label: 'Target',
+                        data: Array(30).fill(2200),
+                        borderColor: '#2ECC71',
+                        backgroundColor: 'rgba(46,204,113,0.1)',
+                        borderWidth: 2,
+                        pointRadius: 0,
+                        fill: false,
+                        borderDash: [6,4]
+                    }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: { display: true, position: 'bottom' }
+                },
+                responsive: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: 2500,
+                        ticks: { color: '#A0AEC0', font: { size: 12 } },
+                        grid: { color: '#E3F0FF' }
+                    },
+                    x: {
+                        ticks: { color: '#A0AEC0', font: { size: 10 } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+});
 </body>
 </html>
                     <div class="workout-image"></div>
