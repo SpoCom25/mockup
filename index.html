@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpoCom - Wo Wissenschaft auf Social Fitness trifft</title>
     <style>
+      html, body {
+      width: 100%;
+      min-height: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
       * {
         margin: 0;
         padding: 0;
@@ -629,6 +642,79 @@
 
         .stats-grid {
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .hero-content,
+        .feature-grid,
+        .usp-grid,
+        .testimonial-grid,
+        .stats-grid,
+        .problem-grid,
+        .footer-content {
+          grid-template-columns: 1fr !important;
+          gap: 20px !important;
+          display: block !important;
+          max-width: 100vw !important;
+          width: 100vw !important;
+          margin: 0 auto !important;
+        }
+        section,
+        .section-header,
+        .footer-content {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          width: 100vw !important;
+          box-sizing: border-box;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body, html {
+          width: 100vw !important;
+          min-width: 100vw !important;
+          overflow-x: hidden !important;
+        }
+        .hero-content,
+        .feature-grid,
+        .usp-grid,
+        .testimonial-grid,
+        .stats-grid,
+        .problem-grid,
+        .footer-content {
+          grid-template-columns: 1fr !important;
+          gap: 20px !important;
+          display: block !important;
+          max-width: 100vw !important;
+          width: 100vw !important;
+          margin: 0 auto !important;
+        }
+        section,
+        .section-header,
+        .footer-content {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          width: 100vw !important;
+          box-sizing: border-box;
+        }
+        .usp-card,
+        .testimonial-card,
+        .stat-card,
+        .problem-card,
+        .feature-content,
+        .feature-visual,
+        .market-info-block {
+          max-width: 98vw !important;
+          margin: 0 auto 20px !important;
+          box-sizing: border-box;
+        }
+        table {
+          display: block;
+          width: 100%;
+          overflow-x: auto;
         }
       }
     </style>
@@ -1421,26 +1507,6 @@
                 >
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          style="background: var(--light); padding: 40px; border-radius: 20px"
-        >
-          <h4 style="font-size: 24px; margin-bottom: 30px; text-align: center">
-            Bewiesene Gamification-Erfolge
-          </h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px">
-            <div style="text-align: center">
-              <div
-                style="font-size: 48px; font-weight: 800; color: var(--success)"
-              >
-                +15%
-              </div>
-              <div style="font-size: 14px; color: var(--gray)">
-                Mehr tägliche Schritte<br />(Fitbit-Studie)
-              </div>
-            </div>
-      
           </div>
         </div>
       </div>
