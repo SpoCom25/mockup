@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SpoCom - Wo Wissenschaft auf Social Fitness trifft</title>
+    <title>SpoCom - Wissenschaftlich fundiertes Social Fitness</title>
     <style>
       html, body {
       width: 100%;
@@ -32,12 +32,13 @@
         --card-bg: #ffffff;
         --text: #222;
         --subtext: #374151;
+        --accent: #8b5cf6;
       }
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           sans-serif;
-        color: var(--dark);
+        color: var(--text);
         line-height: 1.6;
         overflow-x: hidden;
       }
@@ -83,7 +84,7 @@
       }
 
       .nav-link {
-        color: var(--dark);
+        color: var(--text);
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s ease;
@@ -108,7 +109,7 @@
 
       .cta-button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
       }
 
       /* Hero Section */
@@ -121,8 +122,7 @@
             135deg,
             rgba(255, 255, 255, 0.9) 0%,
             rgba(247, 247, 247, 0.9) 100%
-          ),
-          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23FF6B6B;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%234ECDC4;stop-opacity:0.1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad)" /></svg>');
+          );
         background-size: cover;
         position: relative;
       }
@@ -149,7 +149,7 @@
 
       .hero-text p {
         font-size: 20px;
-        color: var(--gray);
+        color: var(--subtext);
         margin-bottom: 30px;
       }
 
@@ -193,7 +193,7 @@
       }
 
       .stat-label {
-        color: var(--gray);
+        color: var(--subtext);
         font-size: 14px;
       }
 
@@ -204,15 +204,9 @@
         min-height: 600px;
       }
 
-      /* Market Stats Section */
-      .market-stats {
-        padding: 100px 20px;
-        background: white;
-      }
-
       .section-header {
         text-align: center;
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto 60px;
       }
 
@@ -224,110 +218,45 @@
 
       .section-header p {
         font-size: 18px;
-        color: var(--gray);
+        color: var(--subtext);
       }
 
-      .stats-grid {
+      /* Trust Section */
+      .trust-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .trust-grid {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 40px auto 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
       }
 
-      .stat-card {
-        background: var(--light);
-        padding: 40px;
-        border-radius: 20px;
-        text-align: center;
-        transition: transform 0.3s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .stat-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 4px;
-        background: var(--gradient);
-        transition: left 0.3s ease;
-      }
-
-      .stat-card:hover::before {
-        left: 0;
-      }
-
-      .stat-card:hover {
-        transform: translateY(-10px);
-      }
-
-      .stat-icon {
-        font-size: 48px;
-        margin-bottom: 20px;
-      }
-
-      .stat-card h3 {
-        font-size: 36px;
-        color: var(--primary);
-        margin-bottom: 10px;
-      }
-
-      .stat-card p {
-        color: var(--gray);
-      }
-
-      /* Problem Section */
-      .problem-section {
-        padding: 100px 20px;
-        background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-        color: var(--dark);
-      }
-
-      .problem-grid {
-        max-width: 1200px;
-        margin: 60px auto 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-      }
-
-      .problem-card {
-        background: white;
+      .trust-card {
+        background: rgba(255, 255, 255, 0.1);
         padding: 30px;
         border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        border-left: 5px solid var(--warning);
+        backdrop-filter: blur(10px);
+        text-align: center;
       }
 
-      .problem-card h3 {
-        font-size: 20px;
-        margin-bottom: 15px;
-        color: var(--dark);
-      }
-
-      .problem-stat {
-        font-size: 32px;
-        font-weight: 800;
-        color: var(--warning);
+      .trust-card h3 {
+        font-size: 48px;
         margin-bottom: 10px;
+        color: #4ecdc4;
       }
 
-      /* Competitor Section */
-      .competitor-section {
+      /* Science Section */
+      .science-section {
         padding: 100px 20px;
         background: white;
       }
 
-      /* USP Section */
-      .usp-section {
-        padding: 100px 20px;
-        background: var(--light);
-      }
-
-      .usp-grid {
+      .science-grid {
         max-width: 1200px;
         margin: 60px auto 0;
         display: grid;
@@ -335,38 +264,144 @@
         gap: 40px;
       }
 
-      .usp-card {
-        background: white;
+      .science-card {
+        background: var(--background);
         padding: 40px;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
+        border-left: 4px solid var(--primary);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .usp-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-      }
-
-      .usp-card:hover::before {
-        transform: scaleX(1);
-      }
-
-      .usp-card:hover {
+      .science-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
 
-      .usp-icon {
+      .science-card h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .science-icon {
+        font-size: 32px;
+      }
+
+      /* Myth Buster Section */
+      .myth-section {
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+      }
+
+      .myth-grid {
+        max-width: 1200px;
+        margin: 60px auto 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .myth-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .myth-header {
+        color: #e74c3c;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .truth-header {
+        color: #27ae60;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+      }
+
+      /* Comparison Section */
+      .comparison-section {
+        padding: 100px 20px;
+        background: var(--background);
+      }
+
+      .comparison-table {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+
+      th {
+        background: var(--gradient);
+        color: white;
+        font-weight: 700;
+      }
+
+      .check-mark {
+        color: #27ae60;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .x-mark {
+        color: #e74c3c;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .partial-mark {
+        color: #f39c12;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      /* Features Section */
+      .features-section {
+        padding: 100px 20px;
+        background: white;
+      }
+
+      .features-grid {
+        max-width: 1200px;
+        margin: 60px auto 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      .feature-card {
+        background: var(--background);
+        padding: 40px;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
         width: 60px;
         height: 60px;
         background: var(--gradient);
@@ -376,137 +411,6 @@
         justify-content: center;
         font-size: 28px;
         margin-bottom: 20px;
-      }
-
-      .usp-card h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
-
-      .usp-card p {
-        color: var(--gray);
-        margin-bottom: 20px;
-      }
-
-      .usp-comparison {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .comparison-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 14px;
-      }
-
-      .check {
-        color: var(--success);
-        font-weight: bold;
-      }
-
-      .cross {
-        color: #e74c3c;
-        font-weight: bold;
-      }
-
-      /* Features Section */
-      .features {
-        padding: 100px 20px;
-        background: white;
-      }
-
-      .feature-grid {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-      }
-
-      .feature-grid:nth-child(even) {
-        direction: rtl;
-      }
-
-      .feature-grid:nth-child(even) > * {
-        direction: ltr;
-      }
-
-      .feature-content h3 {
-        font-size: 36px;
-        margin-bottom: 20px;
-      }
-
-      .feature-content p {
-        font-size: 18px;
-        color: var(--gray);
-        margin-bottom: 30px;
-      }
-
-      .feature-list {
-        list-style: none;
-      }
-
-      .feature-list li {
-        padding: 10px 0;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .feature-visual {
-        height: 400px;
-        background: var(--gradient);
-        border-radius: 20px;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 72px;
-        color: white;
-      }
-
-      /* Testimonials */
-      .testimonials {
-        padding: 100px 20px;
-        background: var(--light);
-      }
-
-      .testimonial-grid {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-      }
-
-      .testimonial-card {
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      }
-
-      .testimonial-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 20px;
-      }
-
-      .avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: var(--gradient);
-      }
-
-      .rating {
-        color: #ffc107;
-        margin-bottom: 15px;
       }
 
       /* CTA Section */
@@ -537,7 +441,7 @@
 
       /* Footer */
       footer {
-        background: var(--dark);
+        background: #1a1a1a;
         color: white;
         padding: 60px 20px 30px;
       }
@@ -574,36 +478,6 @@
         color: #ccc;
       }
 
-      /* Animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-in {
-        animation: fadeInUp 0.8s ease forwards;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-      }
-
-      .pulse {
-        animation: pulse 2s infinite;
-      }
-
       /* Mobile Responsive */
       @media (max-width: 768px) {
         .nav-links {
@@ -624,91 +498,19 @@
           align-items: center;
         }
 
-        .feature-grid {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-
-        .usp-grid,
-        .testimonial-grid {
+        .science-grid,
+        .myth-grid,
+        .features-grid,
+        .trust-grid {
           grid-template-columns: 1fr;
         }
 
-        .stats-grid {
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-
-        .hero-content,
-        .feature-grid,
-        .usp-grid,
-        .testimonial-grid,
-        .stats-grid,
-        .problem-grid,
-        .footer-content {
-          grid-template-columns: 1fr !important;
-          gap: 20px !important;
-          display: block !important;
-          max-width: 100vw !important;
-          width: 100vw !important;
-          margin: 0 auto !important;
-        }
-        section,
-        .section-header,
-        .footer-content {
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          width: 100vw !important;
-          box-sizing: border-box;
-        }
-      }
-
-      @media (max-width: 480px) {
-        body, html {
-          width: 100vw !important;
-          min-width: 100vw !important;
-          overflow-x: hidden !important;
-        }
-        .hero-content,
-        .feature-grid,
-        .usp-grid,
-        .testimonial-grid,
-        .stats-grid,
-        .problem-grid,
-        .footer-content {
-          grid-template-columns: 1fr !important;
-          gap: 20px !important;
-          display: block !important;
-          max-width: 100vw !important;
-          width: 100vw !important;
-          margin: 0 auto !important;
-        }
-        section,
-        .section-header,
-        .footer-content {
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          width: 100vw !important;
-          box-sizing: border-box;
-        }
-        .usp-card,
-        .testimonial-card,
-        .stat-card,
-        .problem-card,
-        .feature-content,
-        .feature-visual,
-        .market-info-block {
-          max-width: 98vw !important;
-          margin: 0 auto 20px !important;
-          box-sizing: border-box;
-        }
         table {
-          display: block;
-          width: 100%;
-          overflow-x: auto;
+          font-size: 14px;
+        }
+
+        th, td {
+          padding: 12px 8px;
         }
       }
     </style>
@@ -719,9 +521,10 @@
       <div class="nav-container">
         <div class="logo">SpoCom</div>
         <div class="nav-links">
+          <a href="#science" class="nav-link">Wissenschaft</a>
           <a href="#features" class="nav-link">Features</a>
           <a href="statistics.html" class="nav-link">Zahlen & Statistiken</a>
-          <a href="#cta" class="cta-button">Demo</a>
+          <a href="#cta" class="cta-button">Demo starten</a>
         </div>
       </div>
     </nav>
@@ -729,741 +532,435 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <div class="hero-text animate-in">
-          <h1>Wo Wissenschaft auf Social Fitness trifft</h1>
+        <div class="hero-text">
+          <h1>Trainiere schlauer, nicht härter</h1>
           <p>
-            Die einzige Plattform, die evidenzbasiertes Training, echte
-            Community-Unterstützung und nahtlose Geräte-Integration vereint -
-            alles in einer App.
+            Die erste Fitness-Plattform, die evidenzbasierte Trainingswissenschaft mit echter Community-Motivation verbindet. Entwickelt nach sportwissenschaftlichen Prinzipien, validiert durch Experten.
           </p>
           <div class="hero-buttons">
-            <a href="#cta" class="cta-button">Test starten</a>
+            <a href="#cta" class="cta-button">Demo starten</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Wissenschaftliche Prinzipien</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Sportarten</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Community-Support</div>
+            </div>
           </div>
         </div>
         <div class="hero-visual">
-          <div
-            style="
-              width: 340px;
-              height: 700px;
-              background: #fff;
-              border-radius: 40px;
-              box-shadow: 0 10px 40px rgba(44, 62, 80, 0.15),
-                0 1.5px 0 #eee inset;
-              border: 8px solid #f7f7f7;
-              position: relative;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              overflow: hidden;
-            "
-          >
-            <!-- Smartphone Notch -->
-            <div
-              style="
-                width: 120px;
-                height: 18px;
-                background: #e5e5e5;
-                border-radius: 10px;
-                position: absolute;
-                top: 12px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 2;
-              "
-            ></div>
-            <!-- Screenshot -->
-            <img
-              src="profil-smartphone.png"
-              alt="Profilseite im Smartphone"
-              style="
-                width: 100%;
-                height: auto;
-                display: block;
-                margin-top: 32px;
-              "
-            />
-          </div>
+          <div style="width: 340px; height: 700px; background: #fff; border-radius: 40px; box-shadow: 0 10px 40px rgba(44, 62, 80, 0.15), 0 1.5px 0 #eee inset; border: 8px solid #f7f7f7; position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+            <div style="width: 120px; height: 18px; background: #e5e5e5; border-radius: 10px; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 2;"></div>
+            <img src="profil-smartphone.png" alt="SpoCom App Interface" style="width: 100%; height: auto; display: block; margin-top: 32px;" />
           </div>
         </div>
       </div>
     </section>
 
-    <section
-  style="padding: 100px 20px; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"
->
-  <div class="section-header">
-    <h2>Warum selbst die besten Fitness-Apps echte Lücken haben</h2>
-    <p>
-      Trotz Millionen von Nutzern fehlt eine ganzheitliche, wissenschaftlich fundierte Social Fitness Plattform
-    </p>
-  </div>
-  <div
-    style="
-      max-width: 1200px;
-      margin: 60px auto 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    "
-  >
-    <!-- Strava Card -->
-    <div
-      style="
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        border: 2px solid #fc4c02;
-      "
-    >
-      <div
-        style="
-          width: 60px;
-          height: 60px;
-          background: #fc4c02;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          color: white;
-          font-weight: bold;
-          font-size: 24px;
-        "
-      >
-        🏃
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">
-        Strava (150M+ Nutzer)
-      </h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ keine Tipps für Sportler</p>
-        <p>✗ Trainingspläne sind generisch, kein individuelles Experten-Coaching</p>
-        <p>✗ Leistungsfokus dominiert – Gesundheit und Ernährung kaum adressiert</p>
-        <p>✗ Premium-Abo rund ~€75/Jahr – im Vergleich zu Gratis-Alternativen teuer</p>
-        <p>✓ Krafttraining kann getrackt werden, aber nur manuell und ohne spezialisierte Analyse-Tools</p>
-        <p>✓ Sehr starke soziale Features: Clubs, Segmente, Challenges, Feed, Kommentare</p>
-      </div>
-    </div>
-
-    <!-- Nike Run Club Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="
-          width: 60px;
-          height: 60px;
-          background: #000;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          color: white;
-          font-weight: bold;
-          font-size: 24px;
-        "
-      >
-        ✓
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">Nike Run Club</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Nur für Läufer – keine Unterstützung weiterer Sportarten</p>
-        <p>✗ Reine Marketing-App ohne tiefgehende Community-Struktur</p>
-        <p>✗ Keine Integration von Krafttraining oder Ernährung</p>
-        <p>✗ Soziale Interaktionen sind begrenzt (kein Feed/Gruppen)</p>
-        <p>✗ Volle Abhängigkeit vom Nike-Ökosystem (App dient Markenbindung)</p>
-      </div>
-    </div>
-
-    <!-- Freeletics Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-   
-    >
-      <div
-        style="
-          width: 60px;
-          height: 60px;
-          background: #1db584;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          color: white;
-          font-weight: bold;
-          font-size: 24px;
-        "
-      >
-        💪
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">Freeletics</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Fokus auf Bodyweight‑ & HIIT-Training, wenig Vielfalt</p>
-        <p>✗ Social-Features sind außerhalb der App (Foren etc.), in-App limitiert</p>
-        <p>✗ Betonung auf Selbstoptimierung, Gesundheitsfokus teils schwach</p>
-        <p>✗ Coach‑Abo notwendig für umfassende Programme & Ernährung</p>
-      </div>
-    </div>
-
-    <!-- Fitbod Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="
-          width: 60px;
-          height: 60px;
-          background: #4a90e2;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          color: white;
-          font-weight: bold;
-          font-size: 24px;
-        "
-      >
-        🏋️
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">Fitbod (~$80/Jahr)</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Kein Social-Feed, keine Community</p>
-        <p>✗ Fokus nur Krafttraining – keine Ausdauer oder Wellness‑Integration</p>
-        <p>✗ Keine Ernährung oder ganzheitlicher Gesundheitsansatz</p>
-        <p>✗ KI-Generierung ohne menschliches Coaching kombiniert</p>
-      </div>
-    </div>
-
-    <!-- Impakt: Fitness AI Coach Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="
-          width: 60px;
-          height: 60px;
-          background: #6366f1;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          color: white;
-          font-weight: bold;
-          font-size: 24px;
-        "
-      >
-        🤖
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">
-        Impakt: Fitness AI Coach
-      </h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ KI-zentrierte Lösung – kaum menschliche Community</p>
-        <p>✗ Nur begrenzte soziale Interaktion innerhalb der App</p>
-        <p>✗ Teilweise geringe Personalisierung für diverse Nutzersegmente</p>
-        <p>✗ Noch keine Ernährungsmöglichkeiten integriert</p>
-        <p>✗ Geringe Motivation ohne echte Gleichgesinnte</p>
-      </div>
-    </div>
-
-    <!-- HeiaHeia Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="
-          width: 60px;
-          height: 60px;
-          background: #00a651;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          color: white;
-          font-weight: bold;
-          font-size: 24px;
-        "
-      >
-        🏢
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">HeiaHeia</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Hauptsächlich auf Unternehmensnutzer (B2B) ausgerichtet</p>
-        <p>✗ Limitierte Trainingsvielfalt & weniger Fokus auf Einzelpersonen</p>
-        <p>✗ Eigene Community eher organisationsbasiert</p>
-        <p>✗ Kein individuelles Coaching für Privatnutzer</p>
-        <p>✗ Kein systematischer Ansatz für Gesundheit oder Ernährung</p>
-      </div>
-    </div>
-
-    <!-- Facebook Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="width: 60px; height: 60px; background: #1877f2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-weight: bold; font-size: 24px;"
-      >
-        f
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">Facebook (3,1B Nutzer)</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Sehr allgemeine Plattform, keine Fitness-Spezialisierung</p>
-        <p>✗ Keine integrierten Gamification- oder Trainingsfeatures</p>
-        <p>✗ Community oft inaktive Gruppen, wenig echter Austausch</p>
-        <p>✗ Junge Zielgruppe kaum vertreten</p>
-      </div>
-    </div>
-
-    <!-- YouTube Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="width: 60px; height: 60px; background: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-weight: bold; font-size: 24px;"
-      >
-        ▶
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">YouTube (2,5B Nutzer)</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Fokus auf Videos, keine Trainings- oder Community-Features</p>
-        <p>✗ Interaktion nur über Kommentare, keine Gruppen</p>
-        <p>✗ Keine Gamification, kein Fortschrittstracking</p>
-        <p>✗ Keine Fitness- oder Ernährungsintegration</p>
-      </div>
-    </div>
-
-    <!-- Instagram Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="width: 60px; height: 60px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-weight: bold; font-size: 24px;"
-      >
-        📷
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">Instagram (2B Nutzer)</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Fokus auf Ästhetik, keine Trainings- oder Ernährungsfeatures</p>
-        <p>✗ Algorithmus limitiert organische Reichweite</p>
-        <p>✗ Hohe Content-Konkurrenz, wenig Community-Tiefe</p>
-        <p>✗ Keine echten Gruppen oder Challenges</p>
-      </div>
-    </div>
-
-    <!-- TikTok Card -->
-    <div
-      style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;"
-    >
-      <div
-        style="width: 60px; height: 60px; background: linear-gradient(45deg, #ff0050, #00f2ea); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-weight: bold; font-size: 24px;"
-      >
-        🎵
-      </div>
-      <h3 style="font-size: 18px; margin-bottom: 15px">TikTok (1,6B Nutzer)</h3>
-      <div style="text-align: left; color: var(--gray); font-size: 14px">
-        <p>✗ Kurzlebige Inhalte, Fokus auf Entertainment</p>
-        <p>✗ Keine Trainings- oder Community-Features</p>
-        <p>✗ Kann zu unrealistischen Körperbildern führen</p>
-        <p>✗ Begrenzte Interaktion, keine Gruppen</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- SpoCom's Unique Position -->
-    <section style="padding: 100px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+    <!-- Trust Section -->
+    <section class="trust-section">
       <div class="section-header">
-        <h2 style="color: white">SpoCom schließt die Lücke, die selbst die Besten haben</h2>
-        <p style="color: rgba(255, 255, 255, 0.9)">
-          Während andere Apps Teilbereiche abdecken, vereint SpoCom erstmals alles in einer wissenschaftlich fundierten Plattform
+        <h2 style="color: white;">Wissenschaftlich fundiert, praxiserprobt</h2>
+        <p style="color: rgba(255, 255, 255, 0.9);">
+          Keine Fitness-Trends, keine Wunder-Diäten – nur evidenzbasierte Methoden
         </p>
       </div>
-      <div style="max-width: 1200px; margin: 60px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-        <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px);">
-          <h3 style="margin-bottom: 20px; color: #4ecdc4;">🎯 Was andere können:</h3>
-          <div style="space-y: 10px;">
-            <p style="margin-bottom: 10px;">• Strava: Starke Community, aber keine wissenschaftlich fundierten Inhalte und teuer</p>
-            <p style="margin-bottom: 10px;">• Nike Run Club: Kostenlos, aber nur für Läufer</p>
-            <p style="margin-bottom: 10px;">• Fitbod: Gute KI-Pläne, aber komplett isoliert</p>
-            <p style="margin-bottom: 10px;">• Freeletics: Intensive Workouts, aber einseitig</p>
-          </div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h3>4</h3>
+          <p>Grundprinzipien der Trainingswissenschaft</p>
+          <small style="opacity: 0.8;">Progressive Overload, Periodisierung, Spezifität, Recovery</small>
         </div>
-        <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px);">
-          <h3 style="margin-bottom: 20px; color: #4ecdc4;">❌ Was allen fehlt:</h3>
-          <div style="space-y: 10px;">
-            <p style="margin-bottom: 10px;">• Ganzheitlicher Ansatz (Training + Ernährung + Gesundheit)</p>
-            <p style="margin-bottom: 10px;">• Echte wissenschaftliche Fundierung</p>
-            <p style="margin-bottom: 10px;">• Alle Sportarten in einer App</p>
-            <p style="margin-bottom: 10px;">• Unterstützende statt konkurrierende Community</p>
-          </div>
+        <div class="trust-card">
+          <h3>100+</h3>
+          <p>Peer-reviewed Studien als Basis</p>
+          <small style="opacity: 0.8;">Aus Sportmedizin, Trainingswissenschaft & Ernährung</small>
         </div>
-        <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px);">
-          <h3 style="margin-bottom: 20px; color: #4ecdc4;">✅ Nur SpoCom bietet:</h3>
-          <div style="space-y: 10px;">
-            <p style="margin-bottom: 10px;">• Kraft + Ausdauer + Ernährung + Gesundheit + Community vereint</p>
-            <p style="margin-bottom: 10px;">• Wissenschaftlich validierte Inhalte für alle Mitglieder</p>
-            <p style="margin-bottom: 10px;">• Erschwingliche All-in-One-Lösung</p>
-          </div>
+        <div class="trust-card">
+          <h3>0</h3>
+          <p>Fitness-Mythen</p>
+          <small style="opacity: 0.8;">Nur wissenschaftlich validierte Informationen</small>
+        </div>
+        <div class="trust-card">
+          <h3>24/7</h3>
+          <p>Experten-kuratierte Inhalte</p>
+          <small style="opacity: 0.8;">Geprüft von Sportwissenschaftlern & Trainern</small>
         </div>
       </div>
     </section>
 
-
-<!-- Quality Content Promise -->
-    <section
-      style="
-        padding: 100px 20px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-      "
-    >
+    <!-- Science Section -->
+    <section class="science-section" id="science">
       <div class="section-header">
-        <h2 style="color: white">Qualität statt Quantität</h2>
-        <p style="color: rgba(255, 255, 255, 0.9)">
-          evidenzbasierte Inhalte statt Trends und Influencer-Hype
+        <h2>Die 4 wissenschaftlichen Säulen von SpoCom</h2>
+        <p>
+          Unser Ansatz basiert auf den fundamentalen Prinzipien der Trainingswissenschaft – keine Modeerscheinungen, sondern bewährte Methoden
         </p>
       </div>
-      <div
-        style="
-          max-width: 1000px;
-          margin: 60px auto 0;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-        "
-      >
-        <div>
-          <h3 style="font-size: 28px; margin-bottom: 20px">
-            Was andere bieten:
-          </h3>
-          <div style="space-y: 15px">
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-                color: rgba(255, 255, 255, 0.8);
-              "
-            >
-              <span style="color: #ff6b6b">✗</span> User-generated Content ohne
-              Überprüfung
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-                color: rgba(255, 255, 255, 0.8);
-              "
-            >
-              <span style="color: #ff6b6b">✗</span> Influencer ohne
-              Qualifikation
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-                color: rgba(255, 255, 255, 0.8);
-              "
-            >
-              <span style="color: #ff6b6b">✗</span> Virale Trends ohne
-              wissenschaftliche Basis
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-                color: rgba(255, 255, 255, 0.8);
-              "
-            >
-              <span style="color: #ff6b6b">✗</span> Gefährliche
-              Fitness-Challenges
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                color: rgba(255, 255, 255, 0.8);
-              "
-            >
-              <span style="color: #ff6b6b">✗</span> Keine Content-Kontrolle
-            </div>
-          </div>
+      <div class="science-grid">
+        <div class="science-card">
+          <h3><span class="science-icon">📈</span> Progressive Overload</h3>
+          <p><strong>Die Wissenschaft:</strong> Dein Körper adaptiert nur, wenn du ihn kontinuierlich forderst. Studien zeigen, dass systematische Steigerung der Trainingsbelastung zu 40% mehr Kraftzuwachs führt.</p>
+          <p style="margin-top: 15px;"><strong>SpoCom macht's möglich:</strong> Tracking deiner Fortschritte mit intelligenten Steigerungsvorschlägen basierend auf deiner Leistungskurve.</p>
         </div>
-        <div>
-          <h3 style="font-size: 28px; margin-bottom: 20px">
-            Was SpoCom garantiert:
-          </h3>
-          <div style="space-y: 15px">
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-              "
-            >
-              <span style="color: #4ecdc4">✓</span> Zertifizierte Trainer und
-              Sportwissenschaftler
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-              "
-            >
-              <span style="color: #4ecdc4">✓</span> Evidenzbasierte
-              Trainingspläne
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-              "
-            >
-              <span style="color: #4ecdc4">✓</span> Strikte Content-Kontrolle
-              gegen Fehlinformationen
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 15px;
-              "
-            >
-              <span style="color: #4ecdc4">✓</span> Gesundheitstipps von
-              Experten
-            </div>
-            <div style="display: flex; align-items: center; gap: 15px">
-              <span style="color: #4ecdc4">✓</span> Seriöse, vertrauenswürdige
-              Fitness-Community
-            </div>
-          </div>
+        
+        <div class="science-card">
+          <h3><span class="science-icon">🔄</span> Periodisierung</h3>
+          <p><strong>Die Wissenschaft:</strong> Strukturiertes Training in Zyklen verhindert Übertraining und Plateaus. Meta-Analysen zeigen 20-30% bessere Ergebnisse durch periodisiertes Training.</p>
+          <p style="margin-top: 15px;"><strong>SpoCom macht's möglich:</strong> Intelligente Trainingsplanung mit automatischen Deload-Phasen und zyklischer Intensitätssteuerung.</p>
+        </div>
+
+        <div class="science-card">
+          <h3><span class="science-icon">🎯</span> Spezifität</h3>
+          <p><strong>Die Wissenschaft:</strong> Dein Körper adaptiert spezifisch auf die Art der Belastung. Training muss zu deinen Zielen passen – das SAID-Prinzip (Specific Adaptation to Imposed Demands).</p>
+          <p style="margin-top: 15px;"><strong>SpoCom macht's möglich:</strong> Zielspezifische Trainingspläne mit bewährten Übungen für Kraft, Hypertrophie, Ausdauer oder Performance.</p>
+        </div>
+
+        <div class="science-card">
+          <h3><span class="science-icon">💤</span> Recovery Science</h3>
+          <p><strong>Die Wissenschaft:</strong> Muskelwachstum passiert in der Erholung, nicht im Training. Studien zeigen: Optimale Recovery steigert Trainingseffekte um bis zu 50%.</p>
+          <p style="margin-top: 15px;"><strong>SpoCom macht's möglich:</strong> Integriertes Recovery-Tracking mit Schlafanalyse, Ernährungsempfehlungen und aktiven Regenerationstagen.</p>
         </div>
       </div>
     </section>
 
-
-    <section style="padding: 100px 20px; background: #fffbe6;">
+    <!-- Myth Buster Section -->
+    <section class="myth-section">
       <div class="section-header">
-        <h2>Die größten Stolpersteine – und wie SpoCom sie löst</h2>
+        <h2>Fitness-Mythen, die wir entlarven</h2>
+        <p>
+          Die Fitness-Industrie ist voll von Halbwahrheiten. Wir räumen mit den häufigsten Mythen auf – wissenschaftlich fundiert.
+        </p>
       </div>
-      <div class="usp-grid">
-        <div class="usp-card">
-          <div class="usp-icon">📋</div>
-          <h3>Kein Plan</h3>
-          <p>Trainingsstruktur und Zielsetzung fehlen oft.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Individuelle Trainingspläne & Fortschritts-Tracking</span>
-          </p>
+      <div class="myth-grid">
+        <div class="myth-card">
+          <div class="myth-header">❌ MYTHOS</div>
+          <p>"Du musst jeden Tag trainieren für Erfolg"</p>
+          <div class="truth-header">✅ WISSENSCHAFT</div>
+          <p>Muskelwachstum braucht 48-72h Recovery. Übertraining führt zu Cortisol-Erhöhung und hemmt den Fortschritt. SpoCom plant automatisch optimale Ruhetage ein.</p>
         </div>
-        <div class="usp-card">
-          <div class="usp-icon">🏋️‍♂️</div>
-          <h3>Falsche Technik</h3>
-          <p>Fehler bei der Ausführung sind häufig.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Video-Tutorials & Experten-Feedback</span>
-          </p>
+
+        <div class="myth-card">
+          <div class="myth-header">❌ MYTHOS</div>
+          <p>"Mehr Protein = mehr Muskeln"</p>
+          <div class="truth-header">✅ WISSENSCHAFT</div>
+          <p>Ab 1,6-2,2g/kg Körpergewicht gibt es keine zusätzlichen Vorteile. SpoCom berechnet deinen individuellen Proteinbedarf basierend auf Trainingsvolumen und Zielen.</p>
         </div>
-        <div class="usp-card">
-          <div class="usp-icon">😵</div>
-          <h3>Zu viel Stress</h3>
-          <p>Übertraining und fehlende Ruhetage.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Automatische Trainingsplanung mit Ruhetagen</span>
-          </p>
+
+        <div class="myth-card">
+          <div class="myth-header">❌ MYTHOS</div>
+          <p>"Cardio killt Muskelaufbau"</p>
+          <div class="truth-header">✅ WISSENSCHAFT</div>
+          <p>Moderates Cardio verbessert die Recovery und Herzgesundheit. Nur exzessives Ausdauertraining (>5h/Woche) kann Hypertrophie beeinträchtigen. SpoCom findet die Balance.</p>
         </div>
-        <div class="usp-card">
-          <div class="usp-icon">🍏</div>
-          <h3>Ernährung</h3>
-          <p>Makros, Proteine und Regeneration werden oft vernachlässigt.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: fundierte Ernährungstipps & Rezeptvorschläge</span>
-          </p>
+
+        <div class="myth-card">
+          <div class="myth-header">❌ MYTHOS</div>
+          <p>"Du brauchst Supplements für Erfolg"</p>
+          <div class="truth-header">✅ WISSENSCHAFT</div>
+          <p>99% der Supplements zeigen keine signifikanten Effekte. Nur Kreatin, Protein und Vitamin D sind wissenschaftlich belegt. SpoCom fokussiert auf echte Ernährung.</p>
         </div>
-        <div class="usp-card">
-          <div class="usp-icon">⏳</div>
-          <h3>Plateaus</h3>
-          <p>Fortschritt stagniert trotz Training.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Community-Challenges & smarte Anpassungen</span>
-          </p>
+
+        <div class="myth-card">
+          <div class="myth-header">❌ MYTHOS</div>
+          <p>"Frauen sollten nicht schwer heben"</p>
+          <div class="truth-header">✅ WISSENSCHAFT</div>
+          <p>Krafttraining mit hohen Gewichten ist für Frauen ebenso effektiv und sicher wie für Männer. Hormonelle Unterschiede bedeuten nicht weniger Potential. SpoCom passt Pläne an individuelle Faktoren an.</p>
         </div>
-        <div class="usp-card">
-          <div class="usp-icon">⏰</div>
-          <h3>Motivation / Zeit</h3>
-          <p>Routinen und kleine Einheiten fehlen, Partner zum Training sind selten.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Gamification, Belohnungen, Community-Support und Zeitplanung</span>
-          </p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon">🔍</div>
-          <h3>Ständiges Suchen nach Tipps</h3>
-          <p>Das Internet ist überflutet mit widersprüchlichen Empfehlungen – es ist fast unmöglich, verlässliche und auf die eigene Fitnessreise zugeschnittene Informationen zu finden.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Wissenschaftlich geprüfte, personalisierte Inhalte und Expertenwissen in einer App.</span>
-          </p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon">📱</div>
-          <h3>Keine zentrale All-in-One-Lösung</h3>
-          <p>Für Training, Ernährung, Gesundheit und Wissen sind meist 3+ Apps notwendig.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Alles in einer Plattform – Training, Ernährung, Community, Gesundheit und Wissen vereint.</span>
-          </p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon">🧩</div>
-          <h3>Zu viel Fragmentierung und Reizüberflutung durch zu viele Quellen</h3>
-          <p>Keine Übersicht über Fortschritt und Inhalte.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Zentrales Dashboard für Fortschritt, Ziele und Inhalte.</span>
-          </p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon">💡</div>
-          <h3>Fehlende Motivation & individuelle Betreuung</h3>
-          <p>Viele fühlen sich allein gelassen und verlieren die Motivation.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Community-Support, Challenges, Gamification und persönliche Empfehlungen.</span>
-          </p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon">💸</div>
-          <h3>Kommerzielle Influencer-Programme</h3>
-          <p>Die meisten Fitness-Influencer wollen Geld mit eigenen Programmen verdienen, die teuer sind und nicht für jeden funktionieren.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Unabhängige, objektive Empfehlungen und Community-basierte Programme.</span>
-          </p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon">😴</div>
-          <h3>Schlaf</h3>
-          <p>Zu wenig oder schlechter Schlaf.<br>
-            <span style="color: var(--primary); font-size: 14px;">Lösung: Tipps für das Timing und Schlafoptimierung.</span>
-          </p>
-        </div>
-        <div class="usp-card">
-          <div class="usp-icon">📍</div>
-          <h3>Lokale Sportaktivitäten finden</h3>
-          <p>Es gibt meist nur dedizierte WhatsApp-Gruppen. Es fehlt eine zentrale Möglichkeit, lokale Aktivitäten zu planen und neue Mitglieder in der Umgebung zu finden.<br>
-            <span style="color: var(--primary); font-size: 14px;">
-              Lösung: Lokale, themenspezifische Gruppen und Events direkt in der App – mit Community-Moderation, Teilnehmerprofilen und Integration in persönliche Ziele.
-            </span>
-          </p>
+
+        <div class="myth-card">
+          <div class="myth-header">❌ MYTHOS</div>
+          <p>"Spot Reduction funktioniert"</p>
+          <div class="truth-header">✅ WISSENSCHAFT</div>
+          <p>Fettabbau erfolgt systemisch, nicht lokal. Hunderte Crunches reduzieren nicht Bauchfett. SpoCom setzt auf ganzheitliche Ernährung plus Krafttraining für optimale Körperkomposition.</p>
         </div>
       </div>
     </section>
 
-         <section class="market-stats" style="background: var(--light); padding-top: 40px;">
+    <!-- Survey Results Section -->
+    <section class="science-section" style="background: var(--background);">
       <div class="section-header">
         <h2>Was Sportler wirklich wollen – Unsere Nutzerbefragung</h2>
         <p>
           Die SpoCom-Umfrage zeigt: Sportler wünschen sich Motivation, Austausch und eine zentrale, wissenschaftlich fundierte Plattform und erwarten dabei eine deutliche Verbesserung ihrer Gesundheit und ihres Wohlbefindens.
         </p>
       </div>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon">🏋️‍♂️</div>
-          <h3>95 %</h3>
+      <div class="science-grid">
+        <div class="science-card">
+          <h3><span class="science-icon">🏋️‍♂️</span> 95%</h3>
           <p>treiben regelmäßig Sport</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">💪</div>
-          <h3>53,5 %</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">💪</span> 53,5%</h3>
           <p>machen Kraftsport</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">👥</div>
-          <h3>68,5 %</h3>
-          <p>Einzelsportarten</p>
+        <div class="science-card">
+          <h3><span class="science-icon">👥</span> 68,5%</h3>
+          <p>bevorzugen Einzelsportarten</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">⏱️</div>
-          <h3>47 %</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">⏱️</span> 47%</h3>
           <p>trainieren 3–4x pro Woche</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">❤️</div>
-          <h3>8 / 10</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">❤️</span> 8/10</h3>
           <p>Wichtigkeit von Gesundheit</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">📱</div>
-          <h3>88 %</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">📱</span> 88%</h3>
           <p>informieren sich über Social Media - dabei gut die Hälfte über Instagram, gefolgt von YouTube</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">📊</div>
-          <h3>58 %</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">📊</span> 58%</h3>
           <p>nutzen Apps/Wearables zum Tracking</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">🍎</div>
-          <h3>42 %</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">🍎</span> 42%</h3>
           <p>tracken ihre Ernährung per App</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">🤝</div>
-          <h3>53,5 %</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">🤝</span> 53,5%</h3>
           <p>würden Fitnessdaten mit Freunden teilen</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">🔬</div>
-          <h3>90 %</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">🔬</span> 90%</h3>
           <p>wünschen sich Expertenwissen & wissenschaftliche Inhalte</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-icon">😐</div>
-          <h3>6 / 10</h3>
+        <div class="science-card">
+          <h3><span class="science-icon">😐</span> 6/10</h3>
           <p>Zufriedenheit mit bisherigen Medien zur Informationsbeschaffung im Bereich Sport und Ernährung</p>
         </div>
       </div>
-    
     </section>
 
+    <!-- Comparison Section -->
+    <section class="comparison-section" id="comparison">
+      <div class="section-header">
+        <h2>SpoCom vs. andere Fitness-Apps</h2>
+        <p>
+          Ein ehrlicher, wissenschaftlich fundierter Vergleich – wo andere Apps Lücken haben und wie SpoCom sie schließt
+        </p>
+      </div>
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>SpoCom</th>
+              <th>Strava</th>
+              <th>Fitbod</th>
+              <th>Freeletics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Wissenschaftliche Trainingspläne</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="x-mark">✗</td>
+              <td class="partial-mark">◐</td>
+              <td class="x-mark">✗</td>
+            </tr>
+            <tr>
+              <td><strong>Kraft- UND Ausdauertraining</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="partial-mark">◐</td>
+              <td class="x-mark">✗</td>
+              <td class="partial-mark">◐</td>
+            </tr>
+            <tr>
+              <td><strong>Evidenzbasierte Ernährung</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="x-mark">✗</td>
+              <td class="x-mark">✗</td>
+              <td class="partial-mark">◐</td>
+            </tr>
+            <tr>
+              <td><strong>Aktive Community</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+              <td class="x-mark">✗</td>
+              <td class="partial-mark">◐</td>
+            </tr>
+            <tr>
+              <td><strong>Periodisierung & Recovery</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="x-mark">✗</td>
+              <td class="partial-mark">◐</td>
+              <td class="x-mark">✗</td>
+            </tr>
+            <tr>
+              <td><strong>Experten-kuratierte Inhalte</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="x-mark">✗</td>
+              <td class="x-mark">✗</td>
+              <td class="x-mark">✗</td>
+            </tr>
+            <tr>
+              <td><strong>Alle Sportarten</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="check-mark">✓</td>
+              <td class="x-mark">✗</td>
+              <td class="x-mark">✗</td>
+            </tr>
+            <tr>
+              <td><strong>Mythen-freie Zone</strong></td>
+              <td class="check-mark">✓</td>
+              <td class="x-mark">✗</td>
+              <td class="x-mark">✗</td>
+              <td class="x-mark">✗</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <section style="padding: 100px 20px; background: var(--light);">
-    <div class="section-header">
-      <h2>So funktioniert SpoCom</h2>
-      <p>
-        Erlebe, wie SpoCom dich auf deiner individuellen Fitnessreise begleitet – von der Profil-Erstellung bis zur Community und Motivation.
-      </p>
-    </div>
-    <div style="max-width: 1200px; margin: 60px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
-      <div style="background: white; border-radius: 18px; box-shadow: 0 4px 18px rgba(44,62,80,0.06); padding: 40px; text-align: center;">
-        <div style="font-size: 48px; margin-bottom: 20px;">📝</div>
-        <h3 style="margin-bottom: 18px; color: var(--primary);">Erstelle dein Fitness-Profil</h3>
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <h2>Die größten Stolpersteine – und wie SpoCom sie wissenschaftlich löst</h2>
         <p>
-          Richte deinen persönlichen Bereich mit Zielen, Routinen und Erfolgen ein. Unser intelligenter Onboarding-Prozess hilft dir, eine Fitness-Identität zu schaffen, die deine individuelle Reise widerspiegelt.
+          Jedes Feature wurde entwickelt, um nachweislich die häufigsten Trainings-Herausforderungen zu überwinden
         </p>
       </div>
-      <div style="background: white; border-radius: 18px; box-shadow: 0 4px 18px rgba(44,62,80,0.06); padding: 40px; text-align: center;">
-        <div style="font-size: 48px; margin-bottom: 20px;">👥</div>
-        <h3 style="margin-bottom: 18px; color: var(--primary);">Tritt Communities bei</h3>
-        <p>
-          Finde und tausche dich mit Fitness-Tribes aus, die zu deinen Interessen passen. Von Kraftsport-Fans bis Marathonläufer – vernetze dich mit Menschen, die deine Leidenschaft und dein Engagement teilen.
-        </p>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Fehlinformation</h3>
+          <p><strong>Das Problem:</strong> Das Internet ist überflutet mit widersprüchlichen Tipps.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Wissenschaftlicher Knowledge Hub mit kuratierten, evidenzbasierten Inhalten.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Eine verlässliche Quelle statt 10 widersprüchlicher Websites</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Keine zentrale Lösung</h3>
+          <p><strong>Das Problem:</strong> Für Training, Ernährung, Gesundheit und Wissen sind meist 3+ Apps notwendig.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Alles in einer Plattform – Training, Ernährung, Community, Gesundheit und Wissen vereint mit nahtloser Integration.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Eine App für deine gesamte Fitness-Journey</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Kein Plan</h3>
+          <p><strong>Das Problem:</strong> Trainingsstruktur und Zielsetzung fehlen oft.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Smart Periodization mit automatischen Zyklen von Aufbau-, Intensiv- und Deload-Phasen basierend auf bewährten Periodisierungsmodellen.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Wissenschaftliche Basis: Rhea et al. (2003) - Periodisiertes Training zeigt 20% höhere Kraftzuwächse</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏋️‍♂️</div>
+          <h3>Falsche Technik</h3>
+          <p><strong>Das Problem:</strong> Fehler bei der Ausführung sind häufig und führen zu Verletzungen.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Trainingspläne mit animierten Übungsausführungen zur korrekten Technik.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Verhindert Verletzungen und maximiert Trainingseffektivität durch korrekte Bewegungsausführung</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">😵</div>
+          <h3>Zu viel Stress & Übertraining</h3>
+          <p><strong>Das Problem:</strong> Übertraining und fehlende Ruhetage hemmen den Fortschritt.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Recovery Optimizer mit Integration von Schlafqualität, Stress-Level und Muskelkater in die automatische Trainingsplanung.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Wissenschaftliche Basis: Halson (2014) - Sleep & Recovery in Elite Athletes</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🍏</div>
+          <h3>Ernährung vernachlässigt</h3>
+          <p><strong>Das Problem:</strong> Makros, Proteine und Regeneration werden oft vernachlässigt.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Makro-Kalkulator mit präziser Berechnung des Kalorienbedarfs und Makronährstoff-Verteilung basierend auf Körperkomposition und Zielen.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Wissenschaftliche Basis: Helms et al. (2014) - Evidence-based recommendations für Natural Bodybuilding</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⏳</div>
+          <h3>Plateaus & Stagnation</h3>
+          <p><strong>Das Problem:</strong> Fortschritt stagniert trotz Training.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Progressive Overload Tracker mit intelligenten Vorschlägen für Gewichts-, Wiederholungs- oder Satzsteigerungen basierend auf deiner Leistungsentwicklung.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Wissenschaftliche Basis: ACSM Guidelines - Systematische Progression für kontinuierliche Adaptation</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⏰</div>
+          <h3>Motivation & Zeit fehlen</h3>
+          <p><strong>Das Problem:</strong> Routinen und kleine Einheiten fehlen, Partner zum Training sind selten.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Science-Based Community mit Gamification, Challenges und Belohnungen. Vernetze dich mit Gleichgesinnten in moderierten Gruppen.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Social Support steigert Trainingsadhärenz um bis zu 30% (Burke et al., 2006)</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🧩</div>
+          <h3>Fragmentierung & Reizüberflutung</h3>
+          <p><strong>Das Problem:</strong> Keine Übersicht über Fortschritt und Inhalte durch zu viele Quellen.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Progress Analytics mit zentralem Dashboard für detaillierte Analyse deiner Kraft-, Ausdauer- und Körperkompositionsentwicklung.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Sichtbarer Fortschritt motiviert und hilft bei der Zielerreichung</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💸</div>
+          <h3>Fehlende individuelle Betreuung</h3>
+          <p><strong>Das Problem:</strong> Teure Programme von Influencern, die nicht für jeden funktionieren.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Unabhängige, objektive Empfehlungen und Community-basierte Programme ohne kommerzielle Interessen.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Qualität über Profit – Experten statt Influencer</small>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Lokale Sportaktivitäten finden</h3>
+          <p><strong>Das Problem:</strong> Meist nur dedizierte WhatsApp-Gruppen. Keine zentrale Möglichkeit für lokale Events.</p>
+          <p style="margin-top: 10px;"><strong>SpoCom's Lösung:</strong> Lokale, themenspezifische Gruppen und Events direkt in der App.</p>
+          <small style="color: var(--subtext); margin-top: 10px; display: block;">Finde Trainingspartner in deiner Nähe für mehr Motivation</small>
+        </div>
       </div>
-      <div style="background: white; border-radius: 18px; box-shadow: 0 4px 18px rgba(44,62,80,0.06); padding: 40px; text-align: center;">
-        <div style="font-size: 48px; margin-bottom: 20px;">🏆</div>
-        <h3 style="margin-bottom: 18px; color: var(--primary);">Tracken, Ranken & gemeinsam wachsen</h3>
-        <p>
-          Logge Aktivitäten, steige im Ranking auf und feiere jeden Meilenstein gemeinsam. Unser einzigartiges Ranking-System sorgt für kontinuierliche Motivation und baut echte Verbindungen auf.
-        </p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+      <h2>Bereit für evidenzbasiertes Training?</h2>
+      <p>Schließe dich der Community an, die auf Wissenschaft statt auf Trends setzt</p>
+      <a href="https://spocom.netlify.app/" class="cta-button">Jetzt Demo testen</a>
+      <!--<p style="margin-top: 20px; font-size: 16px; opacity: 0.8;">Keine Kreditkarte erforderlich • 14 Tage Premium kostenlos</p>-->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>SpoCom</h4>
+          <p style="color: #ccc; line-height: 1.8;">
+            Die erste wissenschaftlich fundierte Social Fitness Plattform. Training basierend auf evidenzbasierten Prinzipien, nicht auf Trends.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Wissenschaft</h4>
+          <a href="#science">Unsere Methodik</a>
+          <a href="#comparison">Studien & Quellen</a>
+          <a href="team.html">Entwickler-Team</a>
+        </div>
+        <div class="footer-section">
+          <h4>Rechtliches</h4>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+        <!--  
+        <div class="footer-section">
+          <h4>Social</h4>
+          <a href="#">Instagram</a>
+        </div>
       </div>
-    </div>
-  </section>
+      -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 SpoCom. Alle Rechte vorbehalten. • Entwickelt mit ❤️ und 🧬 Wissenschaft</p>
+      </div>
+    </footer>
 
     <script>
       // Smooth scroll for navigation links
@@ -1491,59 +988,6 @@
           navbar.style.boxShadow = "0 2px 20px rgba(0,0,0,0.1)";
         }
       });
-
-      // Animate elements on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -100px 0px",
-      };
-
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      // Observe all cards and sections
-      document
-        .querySelectorAll(
-          ".stat-card, .usp-card, .testimonial-card, .feature-grid"
-        )
-        .forEach((el) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(30px)";
-          el.style.transition = "all 0.8s ease";
-          observer.observe(el);
-        });
     </script>
-        <!-- CTA Section -->
-    <section class="cta-section" id="cta">
-      <h2>Bereit für die Fitness-Revolution?</h2>
-      <p>Werde Teil der ersten echten Social Fitness Community</p>
-      <a href="https://spocom.netlify.app/" class="cta-button">Jetzt Demo testen</a>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Rechtliches</h4>
-          <nav aria-label="Rechtliche Links">
-            <ul style="list-style: none; padding: 0;">
-              <li><a href="impressum.html">Impressum</a></li>
-              <li><a href="datenschutz.html">Datenschutz</a></li>
-              <li><a href="agb.html">AGB</a></li>
-            </ul>
-          </nav>
-        </div>
-        <!-- Weitere Footer-Abschnitte können hier ergänzt werden -->
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 SpoCom. Alle Rechte vorbehalten.</p>
-      </div>
-    </footer>
   </body>
 </html>
