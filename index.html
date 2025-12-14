@@ -25,20 +25,21 @@
       }
 
       :root {
-        --primary: #bfc1c6; /* metallic silver */
-        --secondary: #6e6e6e; /* dark gray */
-        --gradient: linear-gradient(135deg, #bfc1c6 0%, #6e6e6e 100%);
-        --background: #232323; /* dark background */
-        --card-bg: #18191a;
-        --text: #e6e6e6;
-        --subtext: #b0b0b0;
-        --accent: #bfc1c6;
+        --primary: #222831; /* dark blue-gray for headings, buttons */
+        --secondary: #393e46; /* slightly lighter for cards */
+        --gradient: linear-gradient(135deg, #bfc1c6 0%, #222831 100%);
+        --background: #f4f6fa; /* very light background for main */
+        --card-bg: #ffffff; /* white cards for contrast */
+        --text: #18191a; /* almost black for best readability */
+        --subtext: #444a54; /* dark gray for subtext */
+        --accent: #4ecdc4; /* teal accent for highlights */
       }
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           sans-serif;
         color: var(--text);
+        background: var(--background);
         line-height: 1.6;
         overflow-x: hidden;
       }
@@ -52,7 +53,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.95);
+        background: #fff;
         backdrop-filter: blur(10px);
         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         z-index: 1000;
@@ -71,10 +72,7 @@
       .logo {
         font-size: 28px;
         font-weight: 900;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--primary);
         letter-spacing: 2px;
         text-transform: uppercase;
       }
@@ -86,20 +84,20 @@
       }
 
       .nav-link {
-        color: var(--text);
+        color: var(--primary);
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s ease;
       }
 
       .nav-link:hover {
-        color: var(--primary);
+        color: var(--accent);
       }
 
       .cta-button {
         padding: 12px 28px;
-        background: var(--gradient);
-        color: white;
+        background: var(--accent);
+        color: #fff;
         border: none;
         border-radius: 25px;
         font-weight: 600;
@@ -110,8 +108,10 @@
       }
 
       .cta-button:hover {
+        background: var(--primary);
+        color: #fff;
         transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 10px 30px rgba(76, 205, 196, 0.2);
       }
 
       /* Hero Section */
@@ -120,11 +120,7 @@
         display: flex;
         align-items: center;
         padding: 100px 20px 50px;
-        background: linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.9) 0%,
-            rgba(247, 247, 247, 0.9) 100%
-          );
+        background: #fff;
         background-size: cover;
         position: relative;
       }
@@ -143,10 +139,7 @@
         font-weight: 900;
         line-height: 1.2;
         margin-bottom: 20px;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--primary);
       }
 
       .hero-text p {
@@ -191,7 +184,7 @@
       .stat-number {
         font-size: 36px;
         font-weight: 800;
-        color: var(--primary);
+        color: var(--accent);
       }
 
       .stat-label {
@@ -216,6 +209,7 @@
         font-size: 42px;
         font-weight: 800;
         margin-bottom: 20px;
+        color: var(--primary);
       }
 
       .section-header p {
@@ -226,8 +220,8 @@
       /* Trust Section */
       .trust-section {
         padding: 80px 20px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        background: var(--primary);
+        color: #fff;
       }
 
       .trust-grid {
@@ -249,13 +243,13 @@
       .trust-card h3 {
         font-size: 48px;
         margin-bottom: 10px;
-        color: #4ecdc4;
+        color: var(--accent);
       }
 
       /* Science Section */
       .science-section {
         padding: 100px 20px;
-        background: white;
+        background: #fff;
       }
 
       .science-grid {
@@ -267,10 +261,10 @@
       }
 
       .science-card {
-        background: var(--background);
+        background: var(--card-bg);
         padding: 40px;
         border-radius: 20px;
-        border-left: 4px solid var(--primary);
+        border-left: 4px solid var(--accent);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
@@ -295,7 +289,7 @@
       /* Myth Buster Section */
       .myth-section {
         padding: 100px 20px;
-        background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        background: #fffbe7;
       }
 
       .myth-grid {
@@ -307,7 +301,7 @@
       }
 
       .myth-card {
-        background: white;
+        background: #fff;
         padding: 30px;
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -331,13 +325,13 @@
       /* Comparison Section */
       .comparison-section {
         padding: 100px 20px;
-        background: var(--background);
+        background: #f4f6fa;
       }
 
       .comparison-table {
         max-width: 1200px;
         margin: 0 auto;
-        background: white;
+        background: #fff;
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -381,7 +375,7 @@
       /* Features Section */
       .features-section {
         padding: 100px 20px;
-        background: white;
+        background: #fff;
       }
 
       .features-grid {
@@ -393,7 +387,7 @@
       }
 
       .feature-card {
-        background: var(--background);
+        background: var(--card-bg);
         padding: 40px;
         border-radius: 20px;
         transition: transform 0.3s ease;
@@ -406,7 +400,8 @@
       .feature-icon {
         width: 60px;
         height: 60px;
-        background: var(--gradient);
+        background: var(--accent);
+        color: #fff;
         border-radius: 15px;
         display: flex;
         align-items: center;
@@ -418,8 +413,8 @@
       /* CTA Section */
       .cta-section {
         padding: 100px 20px;
-        background: var(--gradient);
-        color: white;
+        background: var(--accent);
+        color: #fff;
         text-align: center;
       }
 
@@ -435,16 +430,16 @@
       }
 
       .cta-section .cta-button {
-        background: white;
-        color: var(--primary);
+        background: #fff;
+        color: var(--accent);
         font-size: 18px;
         padding: 15px 40px;
       }
 
       /* Footer */
       footer {
-        background: #1a1a1a;
-        color: white;
+        background: #232323;
+        color: #fff;
         padding: 60px 20px 30px;
       }
 
@@ -462,7 +457,7 @@
       }
 
       .footer-section a {
-        color: #ccc;
+        color: #bfc1c6;
         text-decoration: none;
         display: block;
         padding: 5px 0;
@@ -470,14 +465,14 @@
       }
 
       .footer-section a:hover {
-        color: white;
+        color: var(--accent);
       }
 
       .footer-bottom {
         text-align: center;
         padding-top: 30px;
         border-top: 1px solid #444;
-        color: #ccc;
+        color: #bfc1c6;
       }
 
       /* Mobile Responsive */
@@ -557,12 +552,12 @@
             </div>
           </div>
         </div>
-        <div class="hero-visual">
+        <!-- <div class="hero-visual">
           <div style="width: 340px; height: 700px; background: #fff; border-radius: 40px; box-shadow: 0 10px 40px rgba(44, 62, 80, 0.15), 0 1.5px 0 #eee inset; border: 8px solid #f7f7f7; position: relative; display: flex; flex-direction: column; align-items: center; overflow: hidden;">
             <div style="width: 120px; height: 18px; background: #e5e5e5; border-radius: 10px; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 2;"></div>
-            <img src="profil-smartphone.png" alt="SpoCom App Interface" style="width: 100%; height: auto; display: block; margin-top: 32px;" />
+            <img src="profil-smartphone.png" alt="ScienceFit App Interface" style="width: 100%; height: auto; display: block; margin-top: 32px;" />
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -755,7 +750,7 @@
           <thead>
             <tr>
               <th>Feature</th>
-              <th>SpoCom</th>
+              <th>ScienceFit</th>
               <th>Strava</th>
               <th>Fitbod</th>
               <th>Freeletics</th>
